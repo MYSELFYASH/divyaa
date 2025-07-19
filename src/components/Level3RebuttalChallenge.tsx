@@ -6,7 +6,7 @@ interface Level3RebuttalChallengeProps {
   onBack: () => void;
 }
 
-const arguments = [
+const challengeArguments = [
   {
     id: 'homework',
     statement: "Homework should be banned because it causes stress for students.",
@@ -55,7 +55,7 @@ const Level3RebuttalChallenge: React.FC<Level3RebuttalChallengeProps> = ({ onCom
   };
 
   const submitRebuttals = () => {
-    const currentArg = arguments[currentArgument];
+    const currentArg = challengeArguments[currentArgument];
     let points = 0;
     
     selectedRebuttals.forEach(rebuttalId => {
@@ -69,7 +69,7 @@ const Level3RebuttalChallenge: React.FC<Level3RebuttalChallengeProps> = ({ onCom
     setShowFeedback(true);
     
     setTimeout(() => {
-      if (currentArgument < arguments.length - 1) {
+      if (currentArgument < challengeArguments.length - 1) {
         setCurrentArgument(prev => prev + 1);
         setSelectedRebuttals([]);
         setShowFeedback(false);
@@ -103,7 +103,7 @@ const Level3RebuttalChallenge: React.FC<Level3RebuttalChallengeProps> = ({ onCom
   };
 
   if (currentPhase === 'rebuttal') {
-    const currentArg = arguments[currentArgument];
+    const currentArg = challengeArguments[currentArgument];
     
     return (
       <div className="min-h-screen px-6 py-8">
