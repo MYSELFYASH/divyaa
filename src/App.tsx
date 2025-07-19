@@ -1,8 +1,8 @@
 import React from 'react';
-import MinimalApp from './components/MinimalApp';
+import DebateQuestApp from './components/DebateQuestApp';
 
 function App() {
-  return <MinimalApp />;
+  return <DebateQuestApp />;
 }
 
 export default App;
