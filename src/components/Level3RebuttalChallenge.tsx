@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Shield, Star, Zap, CheckCircle, XCircle, DragHandleDots2Icon as Grip } from 'lucide-react';
+import { ArrowLeft, Shield, Star, Zap, CheckCircle, XCircle, HandIcon as Grip } from 'lucide-react';
 
 interface Level3RebuttalChallengeProps {
   onComplete: (xp: number) => void;
